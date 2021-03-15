@@ -13,7 +13,7 @@
     $sql = "SELECT UserId, UserPassword, UserType FROM Login WHERE UserLoginId='$loginId'";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
-    if(strlen($row) == 1 && password_verify($password, $row["UserPassword"])){
+    if(password_verify($password, $row["UserPassword"])){
         session_start();
         $_SESSION["UserId"] = $row["UserId"];
         if ($row["UserType"] == "admin"){

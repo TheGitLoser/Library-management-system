@@ -28,7 +28,7 @@
     $sql = "SELECT UserPassword FROM Login WHERE UserId='$UserId'";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
-    if(!(strlen($row) == 1 && password_verify($oldPassword, $row["UserPassword"]))){
+    if(!(password_verify($oldPassword, $row["UserPassword"]))){
         mysqli_close($conn);
         echo "<SCRIPT LANGUAGE='JavaScript'>
                 window.alert('Invalid Original password.');
