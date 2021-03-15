@@ -16,7 +16,7 @@
     $row = mysqli_fetch_assoc($result);
     $book = $row["count(*)"];
 
-    $sql = "SELECT count(*) FROM message";
+    $sql = "SELECT count(*) FROM Message";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
     $message = $row["count(*)"];
@@ -98,7 +98,7 @@
                     if (!$conn) {
                         die("<br>Connection failed: " . mysqli_connect_error());
                     }
-                    $sql = "SELECT * FROM message ORDER BY MessageId DESC";
+                    $sql = "SELECT * FROM Message ORDER BY MessageId DESC";
                     $result = mysqli_query($conn, $sql);
 
                     while($row = mysqli_fetch_assoc($result)){

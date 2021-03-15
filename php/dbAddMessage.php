@@ -14,7 +14,7 @@
     $now = date("Y-m-d H:i:s");
 
     //update sql
-    $sql = "INSERT INTO message (UserId, message, messageDate	) VALUES ('$_SESSION[UserId]','$message', '$now')";
+    $sql = "INSERT INTO Message (UserId, Message, MessageDate	) VALUES ('$_SESSION[UserId]','$message', '$now')";
     if (mysqli_query($conn, $sql)) {
         mysqli_close($conn);
         echo "<SCRIPT LANGUAGE='JavaScript'>
