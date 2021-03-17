@@ -19,7 +19,7 @@
         mysqli_close($conn);
         echo "<SCRIPT LANGUAGE='JavaScript'>
                 window.alert('Succesfully Borrowed book.');
-                window.location.href='/pages/main.php';
+                window.location.href='/pages/history.php';
                 </SCRIPT>";
     } else {
         echo "Error updating record: " . mysqli_error($conn);
